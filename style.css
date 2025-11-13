@@ -271,7 +271,8 @@ ul#files.view-details li.header {
     justify-content: flex-start; /* left-align buttons */
     align-items: center;
     gap: 5px;              /* space between buttons and dots */
-    margin-top: 30px;      /* space between picture and buttons */
+    margin-top: 10px;      
+    margin-bottom: 10px;
 }
 
 .nav-buttons .dot {
