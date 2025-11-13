@@ -262,16 +262,16 @@ ul#files.view-details li.header {
     border-radius: 0;  /* no rounding */
     object-fit: cover;  /* ensures image fills the circle nicely */
     margin: 10px 0;     /* spacing above/below */
-    border: 0px solid #222; /* optional border */
+    border: 1px solid #222; /* optional border */
 }
 
 .nav-buttons {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: flex-start; /* left-align buttons */
     align-items: center;
-    gap: 5px;
-    padding-left: 20px; /* space from the left edge */
+    gap: 5px;              /* space between buttons and dots */
+    margin-top: 30px;      /* space between picture and buttons */
 }
 
 .nav-buttons .dot {
