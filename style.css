@@ -267,10 +267,11 @@ ul#files.view-details li.header {
 
 .nav-buttons {
     display: flex;
-    flex-wrap: wrap;       /* wraps on small screens */
-    justify-content: left;
-    align-items: left;
-    gap: 5px;              /* space between items and dots */
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    padding-left: 20px; /* space from the left edge */
 }
 
 .nav-buttons .dot {
