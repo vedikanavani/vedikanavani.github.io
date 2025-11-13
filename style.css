@@ -273,6 +273,7 @@ ul#files.view-details li.header {
     gap: 5px;              /* space between buttons and dots */
     margin-top: 10px;      
     margin-bottom: 10px;
+    padding-left: 0;             
 }
 
 .nav-buttons .dot {
