@@ -257,8 +257,8 @@ ul#files.view-details li.header {
 }
 /* Profile picture styling */
 .profile-pic {
-    width: 400px;       /* adjust size */
-    height: 600px;      /* keep it square or adjust proportionally */
+    width: 300px;       /* adjust size */
+    height: 350px;      /* keep it square or adjust proportionally */
     border-radius: 0;  /* no rounding */
     object-fit: cover;  /* ensures image fills the circle nicely */
     margin: 10px 0;     /* spacing above/below */
@@ -268,7 +268,7 @@ ul#files.view-details li.header {
 .nav-buttons {
     display: flex;
     flex-wrap: wrap;       /* wraps on small screens */
-    justify-content: center;
+    justify-content: left;
     align-items: left;
     gap: 5px;              /* space between items and dots */
 }
