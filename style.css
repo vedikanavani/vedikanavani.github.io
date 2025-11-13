@@ -255,3 +255,12 @@ ul#files.view-details li.header {
     text-indent: 41px;
   }
 }
+/* Profile picture styling */
+.profile-pic {
+    width: 180px;       /* adjust size */
+    height: 180px;      /* keep it square or adjust proportionally */
+    border-radius: 50%; /* makes it circular */
+    object-fit: cover;  /* ensures image fills the circle nicely */
+    margin: 20px 0;     /* spacing above/below */
+    border: 2px solid #222; /* optional border */
+}
