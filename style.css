@@ -268,7 +268,13 @@ ul#files.view-details li.header {
     border: 1px solid #222; /* optional border */
 }
 
-
+.pic-wrapper {
+    width: 200px;
+    height: 250px;
+    overflow: hidden;   /* IMPORTANT */
+    border: 1px solid #222;
+    margin: 20px 0;
+}
     
 }
 
@@ -279,8 +285,8 @@ ul#files.view-details li.header {
     justify-content: flex-start; /* left-align buttons */
     align-items: center;
     gap: 5px;              /* space between buttons and dots */
-    margin-top: 20px;      
-    margin-bottom: 20px;
+    margin-top: 10px;      
+    margin-bottom: 10px;
     padding-left: 0;             
 }
 
