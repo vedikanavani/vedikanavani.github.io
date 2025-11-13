@@ -257,9 +257,8 @@ ul#files.view-details li.header {
 }
 /* Profile picture styling */
 .profile-pic {
-    width: 90px;       /* adjust size */
-    height: 90px;      /* keep it square or adjust proportionally */
-    border-radius: 50%; /* makes it circular */
+    width: 100px;       /* adjust size */
+    height: 100px;      /* keep it square or adjust proportionally */
     object-fit: cover;  /* ensures image fills the circle nicely */
     margin: 10px 0;     /* spacing above/below */
     border: 2px solid #222; /* optional border */
