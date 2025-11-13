@@ -261,7 +261,7 @@ ul#files.view-details li.header {
     height: 250px;      /* keep it square or adjust proportionally */
     border-radius: 0;  /* no rounding */
     object-fit: cover;  /* ensures image fills the circle nicely */
-    margin: 10px 0;     /* spacing above/below */
+    margin: 20px 0;     /* spacing above/below */
     border: 1px solid #222; /* optional border */
 }
 
