@@ -263,3 +263,34 @@ ul#files.view-details li.header {
     margin: 10px 0;     /* spacing above/below */
     border: 2px solid #222; /* optional border */
 }
+
+.nav-buttons {
+    display: flex;
+    flex-wrap: wrap;       /* keeps buttons on multiple lines if small screen */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;             /* space between buttons and dots */
+}
+
+.nav-buttons .btn {
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 20px;
+    border: 2px solid #222;
+    border-radius: 8px;
+    color: #222;
+    transition: 0.3s;
+}
+
+.nav-buttons .btn:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+.nav-buttons .dot {
+    font-size: 0.5rem;     /* very small dot */
+    color: #222;
+    margin: 0 5px;         /* spacing around dot */
+    line-height: 1;        /* keeps dot vertically centered */
+}
+
