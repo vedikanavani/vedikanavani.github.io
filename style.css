@@ -257,12 +257,12 @@ ul#files.view-details li.header {
 }
 /* Profile picture styling */
 .profile-pic {
-    width: 300px;       /* adjust size */
-    height: 350px;      /* keep it square or adjust proportionally */
+    width: 200px;       /* adjust size */
+    height: 250px;      /* keep it square or adjust proportionally */
     border-radius: 0;  /* no rounding */
     object-fit: cover;  /* ensures image fills the circle nicely */
     margin: 10px 0;     /* spacing above/below */
-    border: 2px solid #222; /* optional border */
+    border: 0px solid #222; /* optional border */
 }
 
 .nav-buttons {
