@@ -257,10 +257,10 @@ ul#files.view-details li.header {
 }
 /* Profile picture styling */
 .profile-pic {
-    width: 180px;       /* adjust size */
-    height: 180px;      /* keep it square or adjust proportionally */
+    width: 90px;       /* adjust size */
+    height: 90px;      /* keep it square or adjust proportionally */
     border-radius: 50%; /* makes it circular */
     object-fit: cover;  /* ensures image fills the circle nicely */
-    margin: 20px 0;     /* spacing above/below */
+    margin: 10px 0;     /* spacing above/below */
     border: 2px solid #222; /* optional border */
 }
