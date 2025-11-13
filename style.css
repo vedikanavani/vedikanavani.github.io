@@ -261,9 +261,16 @@ ul#files.view-details li.header {
     height: 250px;      /* keep it square or adjust proportionally */
     border-radius: 0;  /* no rounding */
     object-fit: cover;  /* ensures image fills the circle nicely */
+    object-position: center bottom;
+    transform: scale(1.2);  /* zooms in 20% */
     margin: 20px 0;     /* spacing above/below */
     border: 1px solid #222; /* optional border */
 }
+
+
+    
+}
+
 
 .nav-buttons {
     display: flex;
