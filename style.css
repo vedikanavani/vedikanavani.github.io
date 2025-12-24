@@ -14,14 +14,23 @@ body {
   line-height: 1.5;
 }
 
-/* Header text block */
+/* Header container */
+header {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center text horizontally */
+  gap: 40px;
+}
+
+/* Profile text block - centered and one line */
 .profile-text {
   max-width: 700px;
-  margin: 0 auto 40px auto;
   text-align: center;
 }
 
-/* Main heading - one line */
+/* Main heading - single line */
 .profile-text h1 {
   font-size: 44px;
   font-weight: 700;
@@ -32,7 +41,7 @@ body {
   color: #0b2a5b;
 }
 
-/* Subline - one line */
+/* Subline - single line */
 .profile-text .description {
   font-size: 18px;
   color: #0b2a5b;
@@ -42,11 +51,10 @@ body {
   margin: 0;
 }
 
-/* Picture wrapper */
+/* Picture wrapper aligned left */
 .pic-wrapper {
   width: 180px;
-  margin: 0 auto;
-  position: relative;
+  align-self: flex-start; /* aligns the image to the left */
 }
 
 /* Profile picture */
@@ -58,7 +66,6 @@ body {
   object-position: center center;   /* zoom towards middle */
   transform: scale(1.8);             /* 180% zoom */
   display: block;
-  margin-left: 0;
 }
 
 /* Navigation links — simple text list */
@@ -94,14 +101,6 @@ footer {
   text-align: center;
 }
 
-/* Float picture left on wider screens */
-@media (min-width: 768px) {
-  .pic-wrapper {
-    float: left;
-    margin: 0 30px 30px 0;
-  }
-}
-
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .profile-text h1 {
@@ -115,8 +114,7 @@ footer {
   }
 
   .pic-wrapper {
-    float: none;
-    margin: 0 auto 30px auto;
+    align-self: center; /* center image on mobile */
   }
 
   .profile-pic {
@@ -128,4 +126,3 @@ footer {
     gap: 20px;
   }
 }
-
