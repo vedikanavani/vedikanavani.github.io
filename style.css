@@ -25,17 +25,16 @@ body {
   position: relative;
 }
 
-/* Make all text inherit body color */
-h1, h2, h3, h4, h5, h6,
-p, span, nav, button, input, textarea {
+/* Force all text inside body to inherit --text-main */
+body * {
+  color: var(--text-main) !important;
   font-family: 'Gloria Hallelujah', cursive;
-  color: var(--text-main);
 }
 
-/* Links/buttons use accent color */
+/* Links/buttons override color */
 a, .nav-link {
   text-decoration: none;
-  color: var(--accent-olive-dark);
+  color: var(--accent-olive-dark) !important;
   transition: opacity 0.2s ease;
 }
 
@@ -116,7 +115,7 @@ header h1 {
 .project h2 {
   font-size: 22px;
   margin-bottom: 6px;
-  color: var(--accent-olive-dark);
+  color: var(--accent-olive-dark) !important;
 }
 
 .project a:hover h2 {
@@ -201,4 +200,5 @@ footer {
     gap: 14px;
   }
 }
+
 
