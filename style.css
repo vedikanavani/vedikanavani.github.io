@@ -59,51 +59,48 @@ header h1 {
 ===================== */
 .pic-wrapper {
   width: 220px;
-  height: 220px;          /* 👈 FIXED frame */
+  height: 220px;
   margin: 30px auto 40px;
   transform: translateX(-240px);
-  overflow: hidden;      /* 👈 THIS is the key */
+  overflow: hidden;
 }
-
 
 .profile-pic {
   width: 220px;
   height: 220px;
   object-fit: cover;
   object-position: center;
-  border-radius: 0; /* sharp edges */
+  border-radius: 0;
   display: block;
-
   transform: scale(1.6);
 }
 
 /* =====================
-   NAVIGATION (INDEX + LINKS)
+   NAVIGATION (INDEX PAGE ONLY)
 ===================== */
-nav {
-  font-size: 20px;
-  font-weight: 600;
-  margin-top: 30px;
+.nav-buttons {
+  font-size: 18px;        /* smaller */
+  font-weight: 500;
+  margin-top: 50px;      /* lower on page */
   display: inline-flex;
-  gap: 32px;
+  gap: 18px;             /* tighter spacing */
   flex-wrap: wrap;
   justify-content: center;
 }
 
-nav a,
-.nav-link {
+.nav-buttons a {
   text-decoration: none;
   color: #0b2a5b;
   transition: opacity 0.2s ease;
 }
 
-nav a:hover,
-.nav-link:hover {
+.nav-buttons a:hover {
   opacity: 0.7;
 }
 
-nav .dot {
+.nav-buttons .dot {
   color: #0b2a5b;
+  margin: 0 -6px;        /* pulls dots closer */
 }
 
 /* =====================
@@ -175,9 +172,9 @@ footer {
     height: 180px;
   }
 
-  nav {
-    font-size: 18px;
-    gap: 20px;
+  .nav-buttons {
+    font-size: 16px;
+    gap: 14px;
   }
 }
 
@@ -197,4 +194,3 @@ footer {
   object-fit: cover;
   display: block;
 }
-
