@@ -8,72 +8,50 @@
 /* Page layout */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  background: #eaf4ff;         /* light blue background */
-  color: #0b2a5b;              /* dark blue text */
+  background: #eaf4ff; /* light blue */
+  color: #0b2a5b;      /* dark blue text */
   padding: 60px 40px;
-  line-height: 1.5;
+  line-height: 1.6;
+  text-align: center; /* default center text */
 }
 
-/* Header container */
-header {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column; /* stack vertically */
-  align-items: center;    /* center text horizontally */
-  gap: 40px;
-}
-
-/* Profile text block - centered, allow wrapping */
-.profile-text {
-  max-width: 700px;
-  text-align: center;
-}
-
-/* Main heading - allow single line */
-.profile-text h1 {
-  font-size: 44px;
+/* Header text */
+header h1 {
+  font-size: 42px;
   font-weight: 700;
-  margin-bottom: 12px;
-  white-space: nowrap;        /* keep heading on one line */
+  margin-bottom: 14px;
   color: #0b2a5b;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
-/* Subline - allow wrapping */
-.profile-text .description {
-  font-size: 18px;
+header p.description {
+  font-size: 20px;
   color: #0b2a5b;
-  white-space: normal;        /* allow wrap */
-  margin: 0;
-}
-
-/* Picture wrapper aligned left, no float */
-.pic-wrapper {
-  width: 180px;
-  align-self: flex-start; /* align image to left under text */
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Profile picture */
 .profile-pic {
-  width: 180px;
-  height: 180px;
-  border-radius: 8px;
+  width: 220px;
+  height: 220px;
   object-fit: cover;
-  object-position: center center;   /* zoom toward middle */
-  transform: scale(1.8);             /* 180% zoom */
+  object-position: center center;
+  border-radius: 8px;
   display: block;
+  margin: 0 auto 40px; /* put space below */
 }
 
 /* Navigation links */
 nav {
   font-size: 20px;
   font-weight: 600;
-  margin-top: 60px;
-  display: flex;
-  justify-content: center;
+  margin-top: 20px;
+  display: inline-flex;
   gap: 32px;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+  justify-content: center;
 }
 
 nav a {
@@ -86,36 +64,26 @@ nav a:hover {
   opacity: 0.7;
 }
 
-/* Dot separators */
 nav .dot {
   color: #0b2a5b;
 }
 
 /* Footer */
 footer {
-  margin-top: 80px;
+  margin-top: 60px;
   font-size: 14px;
   color: #0b2a5b;
   text-align: center;
 }
 
-/* Mobile responsiveness */
+/* Mobile responsive tweaks */
 @media (max-width: 768px) {
-  .profile-text h1 {
-    font-size: 36px;
-    white-space: normal;    /* allow heading to wrap on mobile */
+  header h1 {
+    font-size: 34px;
   }
 
-  .profile-text .description {
-    font-size: 16px;
-  }
-
-  .pic-wrapper {
-    align-self: center;     /* center image on mobile */
-  }
-
-  .profile-pic {
-    transform: scale(1.5);
+  header p.description {
+    font-size: 18px;
   }
 
   nav {
@@ -123,4 +91,5 @@ footer {
     gap: 20px;
   }
 }
+
 
