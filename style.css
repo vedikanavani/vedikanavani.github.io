@@ -1,92 +1,98 @@
-/* Reset */
+/* =====================
+   RESET
+===================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Page layout */
+/* =====================
+   PAGE LAYOUT
+===================== */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   background: #eaf4ff; /* light blue */
   color: #0b2a5b;      /* dark blue */
   padding: 60px 40px;
   line-height: 1.6;
-  text-align: center; /* default center text */
+  text-align: center;
 }
 
-/* Container wrapping text and pic */
+/* =====================
+   HEADER (ALL PAGES)
+===================== */
 header {
   max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* center horizontally */
-  gap: 30px;
+  margin: 0 auto 40px auto;
 }
 
-/* Text block containing heading + description */
+header h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #0b2a5b;
+}
+
+/* =====================
+   INDEX PAGE TEXT
+===================== */
 .profile-text {
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 auto 30px auto;
 }
 
-/* Heading: fully centered */
 .profile-text h1 {
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 14px;
-  color: #0b2a5b;
   text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
-/* Description: left aligned but inside a centered container */
 .profile-text .description {
   font-size: 20px;
-  color: #0b2a5b;
-  text-align: left;
-  margin: 0;
+  text-align: left;   /* left aligned inside centered block */
 }
 
-/* Profile picture wrapper to position image */
+/* =====================
+   PROFILE PICTURE
+===================== */
 .pic-wrapper {
   width: 220px;
-  align-self: flex-start; /* move left */
-  margin-left: calc(50% - 350px); /* shift left relative to center */
-  /* Explanation: 50% = center, 350px ≈ half max-width (700/2) of text block to align */
+  margin: 30px auto 40px;
+  text-align: left;
 }
 
-/* Profile picture */
 .profile-pic {
   width: 220px;
   height: 220px;
   object-fit: cover;
-  object-position: center center;
-  border-radius: 0; /* no rounded corners */
+  object-position: center;
+  border-radius: 0; /* sharp edges */
   display: block;
 }
 
-/* Navigation links */
+/* =====================
+   NAVIGATION (INDEX + LINKS)
+===================== */
 nav {
   font-size: 20px;
   font-weight: 600;
-  margin-top: 20px;
+  margin-top: 30px;
   display: inline-flex;
   gap: 32px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-nav a {
+nav a,
+.nav-link {
   text-decoration: none;
   color: #0b2a5b;
   transition: opacity 0.2s ease;
 }
 
-nav a:hover {
+nav a:hover,
+.nav-link:hover {
   opacity: 0.7;
 }
 
@@ -94,33 +100,68 @@ nav .dot {
   color: #0b2a5b;
 }
 
-/* Footer */
+/* =====================
+   PROJECTS / RESEARCH PAGES
+===================== */
+.projects {
+  max-width: 700px;
+  margin: 60px auto;
+  text-align: left;
+}
+
+.project {
+  margin-bottom: 40px;
+}
+
+.project a {
+  text-decoration: none;
+}
+
+.project h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #0b2a5b;
+}
+
+.project a:hover h2 {
+  opacity: 0.7;
+}
+
+.project p {
+  font-size: 16px;
+  color: #0b2a5b;
+  line-height: 1.5;
+}
+
+/* =====================
+   FOOTER
+===================== */
 footer {
   margin-top: 60px;
   font-size: 14px;
   color: #0b2a5b;
-  text-align: center;
 }
 
-/* Mobile responsive tweaks */
+/* =====================
+   MOBILE RESPONSIVE
+===================== */
 @media (max-width: 768px) {
-  header {
-    align-items: center; /* center all on mobile */
+  body {
+    padding: 40px 20px;
+  }
+
+  header h1 {
+    font-size: 34px;
   }
 
   .profile-text h1 {
     font-size: 34px;
-    white-space: normal;
   }
 
   .profile-text .description {
     font-size: 18px;
     text-align: center;
-  }
-
-  .pic-wrapper {
-    margin-left: 0;
-    align-self: center;
   }
 
   .profile-pic {
@@ -133,5 +174,4 @@ footer {
     gap: 20px;
   }
 }
-
 
