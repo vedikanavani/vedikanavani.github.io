@@ -222,24 +222,22 @@ footer {
    ANIMATION
 ===================== */
 
-/* Position the squiggle on the page */
+/* Swirly animation on index */
 .squiggle-svg {
-  position: absolute;  /* overlay on top */
-  top: 100px;          /* adjust vertical position */
+  position: absolute;
+  top: 100px;   /* adjust vertical position */
   left: 0;
   z-index: 10;
 }
 
-/* Animation for the path */
 #squiggle-path {
-  stroke-dasharray: 1000;   /* path length (adjust if your path is longer) */
-  stroke-dashoffset: 1000;  /* start hidden */
+  stroke-dasharray: 1000;  /* roughly total path length */
+  stroke-dashoffset: 1000; /* start “hidden” */
   animation: drawSquiggle 3s ease forwards; /* animate over 3 seconds */
 }
 
-/* Keyframes for drawing effect */
 @keyframes drawSquiggle {
   to {
-    stroke-dashoffset: 0; /* final position = fully drawn */
+    stroke-dashoffset: 0;   /* fully drawn */
   }
 }
