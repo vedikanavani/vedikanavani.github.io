@@ -13,16 +13,16 @@
 ===================== */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  background: #eaf4ff; /* light blue */
-  color: #0b2a5b;      /* dark blue */
+  background: #eaf4ff; 
+  color: #0b2a5b;      
   line-height: 1.6;
   text-align: center;
   position: relative;
 
-  /* Add comfortable margins for all pages */
-  padding: 60px 40px;
+  padding: 60px 40px;     
+  max-width: 1200px;     
+  margin: 0 auto;         
 }
-
 
 /* =====================
    HEADER (ALL PAGES)
@@ -55,7 +55,7 @@ header h1 {
 
 .profile-text .description {
   font-size: 20px;
-  text-align: left;   /* left aligned inside centered block */
+  text-align: left;   
 }
 
 /* =====================
@@ -83,11 +83,11 @@ header h1 {
    NAVIGATION (INDEX PAGE ONLY)
 ===================== */
 .nav-buttons {
-  font-size: 18px;        /* smaller */
+  font-size: 18px;       
   font-weight: 500;
-  margin-top: 50px;      /* lower on page */
+  margin-top: 50px;    
   display: inline-flex;
-  gap: 18px;             /* tighter spacing */
+  gap: 18px;             
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -104,7 +104,7 @@ header h1 {
 
 .nav-buttons .dot {
   color: #0b2a5b;
-  margin: 0 -6px;        /* pulls dots closer */
+  margin: 0 -6px;      
 }
 
 /* =====================
@@ -187,7 +187,7 @@ footer {
 ===================== */
 .fashion-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* bigger columns */
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); 
   gap: 24px;
   width: 100vw;
   padding: 20px;
@@ -195,7 +195,7 @@ footer {
 
 .fashion-grid img {
   width: 100%;
-  height: 600px; /* taller images */
+  height: 600px; 
   object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
@@ -225,23 +225,23 @@ footer {
 /* =====================
    ANIMATION
 ===================== */
-/* Swirly animation on index */
+
 .squiggle-svg {
   position: absolute;
-  top: 100px;   /* adjust vertical position */
+  top: 100px;   
   left: 0;
   z-index: 10;
 }
 
 #squiggle-path {
-  stroke-dasharray: 1000;  /* roughly total path length */
-  stroke-dashoffset: 1000; /* start “hidden” */
-  animation: drawSquiggle 3s ease forwards; /* animate over 3 seconds */
+  stroke-dasharray: 1000;  
+  stroke-dashoffset: 1000; 
+  animation: drawSquiggle 3s ease forwards; 
 }
 
 @keyframes drawSquiggle {
   to {
-    stroke-dashoffset: 0;   /* fully drawn */
+    stroke-dashoffset: 0;  
   }
 }
 
