@@ -83,3 +83,11 @@ footer {
     gap: 20px;
   }
 }
+
+.profile-pic {
+  width: 120px;   /* change this number */
+  height: auto;
+  border-radius: 50%;
+  margin: 30px auto;
+  display: block;
+}
