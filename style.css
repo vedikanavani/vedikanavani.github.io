@@ -24,37 +24,35 @@ header {
   gap: 40px;
 }
 
-/* Profile text block - centered and one line */
+/* Profile text block - centered, allow wrapping */
 .profile-text {
   max-width: 700px;
   text-align: center;
 }
 
-/* Main heading - single line */
+/* Main heading - allow single line */
 .profile-text h1 {
   font-size: 44px;
   font-weight: 700;
   margin-bottom: 12px;
-  white-space: nowrap;
+  white-space: nowrap;        /* keep heading on one line */
+  color: #0b2a5b;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #0b2a5b;
 }
 
-/* Subline - single line */
+/* Subline - allow wrapping */
 .profile-text .description {
   font-size: 18px;
   color: #0b2a5b;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;        /* allow wrap */
   margin: 0;
 }
 
-/* Picture wrapper aligned left */
+/* Picture wrapper aligned left, no float */
 .pic-wrapper {
   width: 180px;
-  align-self: flex-start; /* aligns the image to the left */
+  align-self: flex-start; /* align image to left under text */
 }
 
 /* Profile picture */
@@ -63,12 +61,12 @@ header {
   height: 180px;
   border-radius: 8px;
   object-fit: cover;
-  object-position: center center;   /* zoom towards middle */
+  object-position: center center;   /* zoom toward middle */
   transform: scale(1.8);             /* 180% zoom */
   display: block;
 }
 
-/* Navigation links — simple text list */
+/* Navigation links */
 nav {
   font-size: 20px;
   font-weight: 600;
@@ -105,16 +103,15 @@ footer {
 @media (max-width: 768px) {
   .profile-text h1 {
     font-size: 36px;
-    white-space: normal;
+    white-space: normal;    /* allow heading to wrap on mobile */
   }
 
   .profile-text .description {
     font-size: 16px;
-    white-space: normal;
   }
 
   .pic-wrapper {
-    align-self: center; /* center image on mobile */
+    align-self: center;     /* center image on mobile */
   }
 
   .profile-pic {
@@ -126,3 +123,4 @@ footer {
     gap: 20px;
   }
 }
+
