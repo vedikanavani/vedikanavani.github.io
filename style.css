@@ -69,6 +69,8 @@ header h1 {
   object-position: center;
   border-radius: 0; /* sharp edges */
   display: block;
+
+  transform: scale(1.2);
 }
 
 /* =====================
