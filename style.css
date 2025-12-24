@@ -8,53 +8,60 @@
 /* Page layout */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  background: #eaf4ff;            /* light blue background */
-  color: #0b2a5b;                 /* dark blue text */
+  background: #eaf4ff;         /* light blue background */
+  color: #0b2a5b;              /* dark blue text */
   padding: 60px 40px;
   line-height: 1.5;
 }
 
-/* Header layout */
-.profile-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  max-width: 1000px;
-  margin: 0 auto;
+/* Header text block */
+.profile-text {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  text-align: center;
 }
 
-/* Text block */
-.profile {
-  text-align: left;
-}
-
-/* Main heading */
-.profile h1 {
-  font-size: 44px;                /* smaller than before */
+/* Main heading - one line */
+.profile-text h1 {
+  font-size: 44px;
   font-weight: 700;
   margin-bottom: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: #0b2a5b;
 }
 
-/* Subline */
-.description {
-  font-size: 18px;                /* clearly smaller */
+/* Subline - one line */
+.profile-text .description {
+  font-size: 18px;
   color: #0b2a5b;
-  max-width: 500px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+/* Picture wrapper */
+.pic-wrapper {
+  width: 180px;
+  margin: 0 auto;
+  position: relative;
 }
 
 /* Profile picture */
 .profile-pic {
-  width: 180px;                   /* ~150% of 120px */
+  width: 180px;
   height: 180px;
+  border-radius: 8px;
   object-fit: cover;
-  object-position: center top;    /* zoom toward top */
-  transform: scale(1.5);          /* 150% zoom */
-  border-radius: 8px;             /* square with soft edges */
+  object-position: center center;   /* zoom towards middle */
+  transform: scale(1.8);             /* 180% zoom */
+  display: block;
+  margin-left: 0;
 }
 
-/* Navigation */
+/* Navigation links — simple text list */
 nav {
   font-size: 20px;
   font-weight: 600;
@@ -74,6 +81,7 @@ nav a:hover {
   opacity: 0.7;
 }
 
+/* Dot separators */
 nav .dot {
   color: #0b2a5b;
 }
@@ -86,26 +94,38 @@ footer {
   text-align: center;
 }
 
+/* Float picture left on wider screens */
+@media (min-width: 768px) {
+  .pic-wrapper {
+    float: left;
+    margin: 0 30px 30px 0;
+  }
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-  .profile-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .profile {
-    text-align: center;
-  }
-
-  .profile h1 {
+  .profile-text h1 {
     font-size: 36px;
+    white-space: normal;
   }
 
-  .description {
+  .profile-text .description {
     font-size: 16px;
+    white-space: normal;
+  }
+
+  .pic-wrapper {
+    float: none;
+    margin: 0 auto 30px auto;
   }
 
   .profile-pic {
-    transform: scale(1.3);
+    transform: scale(1.5);
+  }
+
+  nav {
+    font-size: 18px;
+    gap: 20px;
   }
 }
+
