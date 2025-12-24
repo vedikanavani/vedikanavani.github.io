@@ -7,36 +7,34 @@
   box-sizing: border-box;
 }
 
-
 /* =====================
-   COLOR PALETTE + FONTS (NEW)
+   COLOR PALETTE + FONTS
 ===================== */
 :root {
-  --moss: #3C3316;
-  --bark: #43231B;
-  --sage: #8F8360;
-  --butter: #E9CF99;
-  --cocoa: #8C523B;
-  --peach: #EEAC7E;
+  --butter: #FFEDAB;
+  --cherry: #75070C;
+  --olive: #4F6815;
+  --oat: #F0E6DA;
 
-  --font-main: 'Helvetica Neue', Arial, sans-serif;
   --font-hand: 'Gloria Hallelujah', cursive;
+  --font-subtle: 'Kalam', cursive;
 }
 
 /* =====================
-   PAGE LAYOUT (EDITED)
+   PAGE LAYOUT
 ===================== */
 body {
-  font-family: var(--font-main);
-  background: var(--butter);
-  color: var(--moss);
+  font-family: var(--font-subtle);
+  background: var(--oat);
+  color: var(--olive);
   line-height: 1.6;
   text-align: center;
   position: relative;
+  padding-top: 60px;
 }
 
 /* =====================
-   HEADER (EDITED)
+   HEADER
 ===================== */
 header {
   max-width: 900px;
@@ -47,16 +45,15 @@ header h1 {
   font-family: var(--font-hand);
   font-size: 52px;
   font-weight: 700;
-  color: var(--bark);
+  color: var(--cherry);
 }
 
-/* Optional: highlight your name */
 header h1 span {
-  color: var(--cocoa);
+  color: var(--olive);
 }
 
 /* =====================
-   INDEX PAGE TEXT (EDITED)
+   INDEX PAGE TEXT
 ===================== */
 .profile-text {
   max-width: 700px;
@@ -71,12 +68,11 @@ header h1 span {
 }
 
 .profile-text .description {
-  font-family: var(--font-main);
+  font-family: var(--font-subtle);
   font-size: 20px;
-  color: var(--sage);
+  color: var(--olive);
   text-align: left;
 }
-
 
 /* =====================
    PROFILE PICTURE
@@ -94,13 +90,12 @@ header h1 span {
   height: 220px;
   object-fit: cover;
   object-position: center;
-  border-radius: 0;
   display: block;
   transform: scale(1.6);
 }
 
 /* =====================
-   NAVIGATION (EDITED – handwritten)
+   NAVIGATION (INDEX PAGE)
 ===================== */
 .nav-buttons {
   font-family: var(--font-hand);
@@ -115,20 +110,20 @@ header h1 span {
 
 .nav-buttons a {
   text-decoration: none;
-  color: var(--bark);
-  transition: color 0.2s ease;
+  color: var(--cherry);
+  transition: opacity 0.2s ease;
 }
 
 .nav-buttons a:hover {
-  color: var(--cocoa);
+  opacity: 0.7;
 }
 
 .nav-buttons .dot {
-  color: var(--sage);
+  color: var(--olive);
 }
 
 /* =====================
-   PROJECTS / RESEARCH PAGES (EDITED)
+   PROJECTS / RESEARCH PAGES
 ===================== */
 .projects {
   max-width: 700px;
@@ -147,38 +142,99 @@ header h1 span {
 .project h2 {
   font-family: var(--font-hand);
   font-size: 26px;
-  font-weight: 600;
-  color: var(--bark);
-}
-
-.project a:hover h2 {
-  color: var(--cocoa);
+  color: var(--cherry);
+  margin-bottom: 6px;
 }
 
 .project p {
-  font-family: var(--font-main);
+  font-family: var(--font-subtle);
   font-size: 16px;
-  color: var(--sage);
+  color: var(--olive);
   line-height: 1.5;
 }
 
 /* =====================
-   FOOTER (EDITED)
+   FASHION GRID
 ===================== */
-footer {
-  margin-top: 60px;
-  font-family: var(--font-hand);
-  font-size: 18px;
-  color: var(--sage);
+.fashion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 24px;
+  width: 100vw;
+  padding: 20px;
+}
+
+.fashion-grid img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.fashion-grid img:hover {
+  transform: scale(1.03);
 }
 
 /* =====================
-   MOBILE RESPONSIVE (PARTIALLY EDITED)
+   GO BACK HOME LINKS
+===================== */
+.nav-link {
+  font-family: var(--font-subtle);
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--olive);
+  transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  margin-top: 60px;
+  font-family: var(--font-subtle);
+  font-size: 16px;
+  color: var(--olive);
+}
+
+/* =====================
+   SQUIGGLE ANIMATION
+===================== */
+.squiggle-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: -1;
+}
+
+#squiggle-path {
+  stroke: var(--cherry);
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawSquiggle 3s ease forwards;
+  stroke-opacity: 0.35;
+}
+
+@keyframes drawSquiggle {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* =====================
+   MOBILE RESPONSIVE
 ===================== */
 @media (max-width: 768px) {
-
   body {
-    padding: 40px 20px;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   header h1,
@@ -195,78 +251,5 @@ footer {
     font-size: 20px;
     gap: 16px;
   }
-
-  .profile-pic {
-    width: 180px;
-    height: 180px;
-  }
-
-  .nav-buttons {
-    font-size: 16px;
-    gap: 14px;
-  }
 }
 
-/* =====================
-   FASHION GRID
-===================== */
-.fashion-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); 
-  gap: 24px;
-  width: 100vw;
-  padding: 20px;
-}
-
-.fashion-grid img {
-  width: 100%;
-  height: 600px; 
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.fashion-grid img:hover {
-  transform: scale(1.03);
-}
-
-
-
-/* =====================
-   NAV LINK (GO BACK HOME) – EDITED
-===================== */
-.nav-link {
-  font-family: var(--font-hand);
-  font-size: 22px;
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--bark);
-  transition: color 0.2s ease;
-}
-
-.nav-link:hover {
-  color: var(--cocoa);
-}
-
-/* =====================
-   SQUIGGLE ANIMATION (EDITED)
-===================== */
-.squiggle-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 200px;
-  z-index: -1;
-}
-
-#squiggle-path {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: drawSquiggle 3s ease forwards;
-  stroke-opacity: 0.35;
-}
-
-@keyframes drawSquiggle {
-  to { stroke-dashoffset: 0; }
-}
