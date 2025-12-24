@@ -65,9 +65,12 @@ header h1 {
 ===================== */
 .pic-wrapper {
   width: 220px;
+  height: 220px;          /* 👈 FIXED frame */
   margin: 30px auto 40px;
   transform: translateX(-240px);
+  overflow: hidden;      /* 👈 THIS is the key */
 }
+
 
 .profile-pic {
   width: 220px;
