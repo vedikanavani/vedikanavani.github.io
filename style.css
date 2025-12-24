@@ -19,6 +19,9 @@ body {
   line-height: 1.6;
   text-align: center;
 }
+body {
+  position: relative;  /* ensures z-index works for children */
+}
 
 /* =====================
    HEADER (ALL PAGES)
