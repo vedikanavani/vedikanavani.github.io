@@ -8,41 +8,57 @@
 /* Page layout */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  background: #fff;
-  color: #111;
-  text-align: center;
-  padding: 60px 20px;
+  background: #eaf4ff;            /* light blue background */
+  color: #0b2a5b;                 /* dark blue text */
+  padding: 60px 40px;
   line-height: 1.5;
 }
 
+/* Header layout */
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Text block */
+.profile {
+  text-align: left;
+}
+
 /* Main heading */
-header {
-  margin-bottom: 50px;
-}
-
 .profile h1 {
-  font-size: 64px;
-  font-weight: 800;
-  color: #000;
-  margin-bottom: 15px;
+  font-size: 44px;                /* smaller than before */
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #0b2a5b;
 }
 
-.profile h1 span {
-  color: #000;
-}
-
-/* Description text */
+/* Subline */
 .description {
-  font-size: 22px;
-  color: #444;
-  margin-bottom: 40px;
+  font-size: 18px;                /* clearly smaller */
+  color: #0b2a5b;
+  max-width: 500px;
 }
 
-/* Navigation links — simple text list */
+/* Profile picture */
+.profile-pic {
+  width: 180px;                   /* ~150% of 120px */
+  height: 180px;
+  object-fit: cover;
+  object-position: center top;    /* zoom toward top */
+  transform: scale(1.5);          /* 150% zoom */
+  border-radius: 8px;             /* square with soft edges */
+}
+
+/* Navigation */
 nav {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
-  margin-top: 30px;
+  margin-top: 60px;
   display: flex;
   justify-content: center;
   gap: 32px;
@@ -50,44 +66,46 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #000;
-  transition: color 0.2s ease;
+  color: #0b2a5b;
+  transition: opacity 0.2s ease;
 }
 
 nav a:hover {
-  color: #888;
+  opacity: 0.7;
 }
 
-/* Dot separators */
 nav .dot {
-  color: #888;
+  color: #0b2a5b;
 }
 
 /* Footer */
 footer {
   margin-top: 80px;
   font-size: 14px;
-  color: #777;
+  color: #0b2a5b;
+  text-align: center;
 }
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-  .profile h1 {
-    font-size: 48px;
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
   }
-  .description,
-  nav {
-    font-size: 18px;
-  }
-  nav {
-    gap: 20px;
-  }
-}
 
-.profile-pic {
-  width: 120px;   /* change this number */
-  height: auto;
-  border-radius: 50%;
-  margin: 30px auto;
-  display: block;
+  .profile {
+    text-align: center;
+  }
+
+  .profile h1 {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .profile-pic {
+    transform: scale(1.3);
+  }
 }
