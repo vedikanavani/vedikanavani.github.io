@@ -225,6 +225,13 @@ footer {
 /* =====================
    ANIMATION
 ===================== */
+body {
+  position: relative;   /* needed so absolute SVG is relative to body */
+  padding: 60px 40px;   /* margins for all pages */
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: #eaf4ff;
+  color: #0b2a5b;
+}
 
 .squiggle-svg {
   position: absolute;
@@ -232,17 +239,18 @@ footer {
   left: 0;
   width: 100%;
   height: 200px;
-  z-index: 0;             /* behind content */
+  z-index: -1;          /* behind all content */
 }
 
 #squiggle-path {
-  stroke-dasharray: 1000;  /* path length */
-  stroke-dashoffset: 1000; /* start hidden */
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
   animation: drawSquiggle 3s ease forwards;
-  stroke-opacity: 0.3;     /* subtle */
+  stroke-opacity: 0.3;
 }
 
 @keyframes drawSquiggle {
   to { stroke-dashoffset: 0; }
 }
+
 
