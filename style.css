@@ -1,3 +1,6 @@
+/* =====================
+   RESET
+===================== */
 * {
   margin: 0;
   padding: 0;
@@ -22,19 +25,23 @@ body {
   position: relative;
 }
 
-body,
+/* Make all text inherit body color */
 h1, h2, h3, h4, h5, h6,
-p,
-a,
-span,
-nav,
-button,
-input,
-textarea {
+p, span, nav, button, input, textarea {
   font-family: 'Gloria Hallelujah', cursive;
-  color: inherit; 
+  color: var(--text-main);
 }
 
+/* Links/buttons use accent color */
+a, .nav-link {
+  text-decoration: none;
+  color: var(--accent-olive-dark);
+  transition: opacity 0.2s ease;
+}
+
+a:hover, .nav-link:hover {
+  opacity: 0.7;
+}
 
 header {
   max-width: 900px;
@@ -87,16 +94,6 @@ header h1 {
   justify-content: center;
 }
 
-.nav-buttons a {
-  text-decoration: none;
-  color: var(--accent-olive-dark);
-  transition: opacity 0.2s ease;
-}
-
-.nav-buttons a:hover {
-  opacity: 0.7;
-}
-
 .nav-buttons .dot {
   color: var(--accent-olive-dark);
   margin: 0 -6px;
@@ -134,17 +131,6 @@ header h1 {
 footer {
   margin-top: 60px;
   font-size: 14px;
-}
-
-.nav-link {
-  font-size: 18px;
-  text-decoration: none;
-  color: var(--accent-olive-dark);
-  transition: opacity 0.2s ease;
-}
-
-.nav-link:hover {
-  opacity: 0.7;
 }
 
 .fashion-grid {
@@ -215,3 +201,4 @@ footer {
     gap: 14px;
   }
 }
+
