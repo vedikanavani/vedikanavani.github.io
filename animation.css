@@ -1,0 +1,73 @@
+/* SWIRL BASE */
+.swirl {
+  position: fixed; /* float over everything */
+  width: 60px;
+  height: 60px;
+  border: 3px solid #ff6f61; /* color of swirl */
+  border-radius: 50%;
+  z-index: 1000;
+  opacity: 0;
+  transform: scale(0) rotate(0deg);
+  animation: swirl-in 2s ease forwards;
+}
+
+/* LEFT SWIRLS */
+.swirl-left {
+  left: -100px; /* start off screen */
+}
+
+/* RIGHT SWIRLS */
+.swirl-right {
+  right: -100px; /* start off screen */
+}
+
+/* ANIMATION */
+@keyframes swirl-in {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+/* OPTIONAL: move them into view */
+.swirl-left {
+  animation-name: swirl-left-in;
+}
+
+.swirl-right {
+  animation-name: swirl-right-in;
+}
+
+@keyframes swirl-left-in {
+  0% {
+    left: -100px;
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  100% {
+    left: 50px; /* final position */
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+@keyframes swirl-right-in {
+  0% {
+    right: -100px;
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  100% {
+    right: 50px; /* final position */
+    opacity: 1;
+    transform: scale(1) rotate(-360deg);
+  }
+}
