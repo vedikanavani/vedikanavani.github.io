@@ -1,82 +1,52 @@
-/* =====================
-   RESET
-===================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* =====================
-   COLOR PALETTE + FONTS
-===================== */
 :root {
-  --butter: #FFEDAB;
-  --cherry: #75070C;
-  --olive: #4F6815;
-  --oat: #F0E6DA;
-
-  --font-hand: 'Gloria Hallelujah', cursive;
-  --font-subtle: 'Kalam', cursive;
+  --bg-oat: #EFE6D8;
+  --bg-olive: #8B8F6A;
+  --text-main: #2E2E2E;
+  --accent-olive-dark: #5F6448;
 }
 
-/* =====================
-   PAGE LAYOUT
-===================== */
 body {
-  font-family: var(--font-subtle);
-  background: var(--oat);
-  color: var(--olive);
+  font-family: 'Gloria Hallelujah', cursive;
+  background-color: var(--bg-oat);
+  color: var(--text-main);
   line-height: 1.6;
   text-align: center;
+  margin: 0;
+  padding: 80px 6vw;
   position: relative;
-  padding-top: 60px;
 }
 
-/* =====================
-   HEADER
-===================== */
 header {
   max-width: 900px;
   margin: 0 auto 40px auto;
 }
 
 header h1 {
-  font-family: var(--font-hand);
-  font-size: 52px;
-  font-weight: 700;
-  color: var(--cherry);
+  font-size: 42px;
+  font-weight: 400;
 }
 
-header h1 span {
-  color: var(--olive);
-}
-
-/* =====================
-   INDEX PAGE TEXT
-===================== */
 .profile-text {
   max-width: 700px;
   margin: 0 auto 30px auto;
 }
 
 .profile-text h1 {
-  font-family: var(--font-hand);
-  font-size: 52px;
-  font-weight: 700;
+  font-size: 42px;
   margin-bottom: 14px;
 }
 
 .profile-text .description {
-  font-family: var(--font-subtle);
   font-size: 20px;
-  color: var(--olive);
   text-align: left;
 }
 
-/* =====================
-   PROFILE PICTURE
-===================== */
 .pic-wrapper {
   width: 220px;
   height: 220px;
@@ -94,23 +64,18 @@ header h1 span {
   transform: scale(1.6);
 }
 
-/* =====================
-   NAVIGATION (INDEX PAGE)
-===================== */
 .nav-buttons {
-  font-family: var(--font-hand);
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 18px;
   margin-top: 50px;
   display: inline-flex;
-  gap: 22px;
+  gap: 18px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .nav-buttons a {
   text-decoration: none;
-  color: var(--cherry);
+  color: var(--accent-olive-dark);
   transition: opacity 0.2s ease;
 }
 
@@ -119,12 +84,10 @@ header h1 span {
 }
 
 .nav-buttons .dot {
-  color: var(--olive);
+  color: var(--accent-olive-dark);
+  margin: 0 -6px;
 }
 
-/* =====================
-   PROJECTS / RESEARCH PAGES
-===================== */
 .projects {
   max-width: 700px;
   margin: 60px auto;
@@ -140,28 +103,42 @@ header h1 span {
 }
 
 .project h2 {
-  font-family: var(--font-hand);
-  font-size: 26px;
-  color: var(--cherry);
+  font-size: 22px;
   margin-bottom: 6px;
+  color: var(--accent-olive-dark);
+}
+
+.project a:hover h2 {
+  opacity: 0.7;
 }
 
 .project p {
-  font-family: var(--font-subtle);
   font-size: 16px;
-  color: var(--olive);
   line-height: 1.5;
 }
 
-/* =====================
-   FASHION GRID
-===================== */
+footer {
+  margin-top: 60px;
+  font-size: 14px;
+}
+
+.nav-link {
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--accent-olive-dark);
+  transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
 .fashion-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 24px;
-  width: 100vw;
-  padding: 20px;
+  width: 100%;
+  padding: 20px 0;
 }
 
 .fashion-grid img {
@@ -176,34 +153,6 @@ header h1 span {
   transform: scale(1.03);
 }
 
-/* =====================
-   GO BACK HOME LINKS
-===================== */
-.nav-link {
-  font-family: var(--font-subtle);
-  font-size: 18px;
-  text-decoration: none;
-  color: var(--olive);
-  transition: opacity 0.2s ease;
-}
-
-.nav-link:hover {
-  opacity: 0.7;
-}
-
-/* =====================
-   FOOTER
-===================== */
-footer {
-  margin-top: 60px;
-  font-family: var(--font-subtle);
-  font-size: 16px;
-  color: var(--olive);
-}
-
-/* =====================
-   SQUIGGLE ANIMATION
-===================== */
 .squiggle-svg {
   position: absolute;
   top: 0;
@@ -214,7 +163,7 @@ footer {
 }
 
 #squiggle-path {
-  stroke: var(--cherry);
+  stroke: var(--accent-olive-dark);
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: drawSquiggle 3s ease forwards;
@@ -227,19 +176,14 @@ footer {
   }
 }
 
-/* =====================
-   MOBILE RESPONSIVE
-===================== */
 @media (max-width: 768px) {
   body {
-    padding-top: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 60px 20px;
   }
 
   header h1,
   .profile-text h1 {
-    font-size: 40px;
+    font-size: 34px;
   }
 
   .profile-text .description {
@@ -247,9 +191,13 @@ footer {
     text-align: center;
   }
 
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+  }
+
   .nav-buttons {
-    font-size: 20px;
-    gap: 16px;
+    font-size: 16px;
+    gap: 14px;
   }
 }
-
