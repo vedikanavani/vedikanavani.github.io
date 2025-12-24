@@ -9,21 +9,34 @@
 
 
 /* =====================
-   PAGE LAYOUT
+   COLOR PALETTE + FONTS (NEW)
 ===================== */
-body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background: #eaf4ff; 
-  color: #0b2a5b;      
-  line-height: 1.6;
-  text-align: center;
-  position: relative;        
+:root {
+  --moss: #3C3316;
+  --bark: #43231B;
+  --sage: #8F8360;
+  --butter: #E9CF99;
+  --cocoa: #8C523B;
+  --peach: #EEAC7E;
 
-  padding: 60px 40px;
+  --font-main: 'Helvetica Neue', Arial, sans-serif;
+  --font-hand: 'Caveat', cursive;
 }
 
 /* =====================
-   HEADER (ALL PAGES)
+   PAGE LAYOUT (EDITED)
+===================== */
+body {
+  font-family: var(--font-main);
+  background: var(--butter);
+  color: var(--moss);
+  line-height: 1.6;
+  text-align: center;
+  position: relative;
+}
+
+/* =====================
+   HEADER (EDITED)
 ===================== */
 header {
   max-width: 900px;
@@ -31,13 +44,19 @@ header {
 }
 
 header h1 {
-  font-size: 42px;
+  font-family: var(--font-hand);
+  font-size: 52px;
   font-weight: 700;
-  color: #0b2a5b;
+  color: var(--bark);
+}
+
+/* Optional: highlight your name */
+header h1 span {
+  color: var(--cocoa);
 }
 
 /* =====================
-   INDEX PAGE TEXT
+   INDEX PAGE TEXT (EDITED)
 ===================== */
 .profile-text {
   max-width: 700px;
@@ -45,16 +64,19 @@ header h1 {
 }
 
 .profile-text h1 {
-  font-size: 42px;
+  font-family: var(--font-hand);
+  font-size: 52px;
   font-weight: 700;
   margin-bottom: 14px;
-  text-align: center;
 }
 
 .profile-text .description {
+  font-family: var(--font-main);
   font-size: 20px;
-  text-align: left;   
+  color: var(--sage);
+  text-align: left;
 }
+
 
 /* =====================
    PROFILE PICTURE
@@ -78,35 +100,35 @@ header h1 {
 }
 
 /* =====================
-   NAVIGATION (INDEX PAGE ONLY)
+   NAVIGATION (EDITED – handwritten)
 ===================== */
 .nav-buttons {
-  font-size: 18px;       
-  font-weight: 500;
-  margin-top: 50px;    
+  font-family: var(--font-hand);
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 50px;
   display: inline-flex;
-  gap: 18px;             
+  gap: 22px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .nav-buttons a {
   text-decoration: none;
-  color: #0b2a5b;
-  transition: opacity 0.2s ease;
+  color: var(--bark);
+  transition: color 0.2s ease;
 }
 
 .nav-buttons a:hover {
-  opacity: 0.7;
+  color: var(--cocoa);
 }
 
 .nav-buttons .dot {
-  color: #0b2a5b;
-  margin: 0 -6px;      
+  color: var(--sage);
 }
 
 /* =====================
-   PROJECTS / RESEARCH PAGES
+   PROJECTS / RESEARCH PAGES (EDITED)
 ===================== */
 .projects {
   max-width: 700px;
@@ -123,50 +145,55 @@ header h1 {
 }
 
 .project h2 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 6px;
-  color: #0b2a5b;
+  font-family: var(--font-hand);
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--bark);
 }
 
 .project a:hover h2 {
-  opacity: 0.7;
+  color: var(--cocoa);
 }
 
 .project p {
+  font-family: var(--font-main);
   font-size: 16px;
-  color: #0b2a5b;
+  color: var(--sage);
   line-height: 1.5;
 }
 
 /* =====================
-   FOOTER
+   FOOTER (EDITED)
 ===================== */
 footer {
   margin-top: 60px;
-  font-size: 14px;
-  color: #0b2a5b;
+  font-family: var(--font-hand);
+  font-size: 18px;
+  color: var(--sage);
 }
 
 /* =====================
-   MOBILE RESPONSIVE
+   MOBILE RESPONSIVE (PARTIALLY EDITED)
 ===================== */
 @media (max-width: 768px) {
+
   body {
     padding: 40px 20px;
   }
 
-  header h1 {
-    font-size: 34px;
-  }
-
+  header h1,
   .profile-text h1 {
-    font-size: 34px;
+    font-size: 40px;
   }
 
   .profile-text .description {
     font-size: 18px;
     text-align: center;
+  }
+
+  .nav-buttons {
+    font-size: 20px;
+    gap: 16px;
   }
 
   .profile-pic {
@@ -206,41 +233,40 @@ footer {
 
 
 /* =====================
-   NAV LINK (GO BACK HOME BUTTONS)
+   NAV LINK (GO BACK HOME) – EDITED
 ===================== */
 .nav-link {
-  font-size: 18px;
-  font-weight: 500;
+  font-family: var(--font-hand);
+  font-size: 22px;
+  font-weight: 600;
   text-decoration: none;
-  color: #0b2a5b;
-  transition: opacity 0.2s ease;
+  color: var(--bark);
+  transition: color 0.2s ease;
 }
 
 .nav-link:hover {
-  opacity: 0.7;
+  color: var(--cocoa);
 }
 
 /* =====================
-   ANIMATION
+   SQUIGGLE ANIMATION (EDITED)
 ===================== */
-
 .squiggle-svg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 200px;
-  z-index: -1;          /* behind all content */
+  z-index: -1;
 }
 
 #squiggle-path {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: drawSquiggle 3s ease forwards;
-  stroke-opacity: 0.3;
+  stroke-opacity: 0.35;
 }
 
 @keyframes drawSquiggle {
   to { stroke-dashoffset: 0; }
 }
-
