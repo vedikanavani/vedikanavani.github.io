@@ -194,3 +194,19 @@ footer {
   object-fit: cover;
   display: block;
 }
+
+/* =====================
+   NAV LINK (GO BACK HOME BUTTONS)
+===================== */
+.nav-link {
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #0b2a5b;
+  transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
