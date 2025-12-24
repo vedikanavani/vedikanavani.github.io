@@ -8,6 +8,13 @@
 }
 
 /* =====================
+   GLOBAL BACKGROUND
+===================== */
+html {
+  background-color: #eaf4ff; /* light blue */
+}
+
+/* =====================
    PAGE LAYOUT
 ===================== */
 body {
