@@ -183,15 +183,15 @@ footer {
 ===================== */
 .fashion-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* bigger columns */
   gap: 24px;
   width: 100vw;
-  padding: 40px 20px;
+  padding: 20px;
 }
 
 .fashion-grid img {
   width: 100%;
-  height: 420px;
+  height: 600px; /* taller images */
   object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
@@ -200,6 +200,7 @@ footer {
 .fashion-grid img:hover {
   transform: scale(1.03);
 }
+
 
 
 /* =====================
