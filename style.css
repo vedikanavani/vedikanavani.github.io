@@ -251,3 +251,6 @@ footer {
   z-index: -1;  /* send behind other content */
 }
 
+#squiggle-path {
+  stroke-opacity: 0.3; /* lighter, less intrusive */
+}
