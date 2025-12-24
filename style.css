@@ -9,27 +9,54 @@
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   background: #eaf4ff; /* light blue */
-  color: #0b2a5b;      /* dark blue text */
+  color: #0b2a5b;      /* dark blue */
   padding: 60px 40px;
   line-height: 1.6;
   text-align: center; /* default center text */
 }
 
-/* Header text */
-header h1 {
+/* Container wrapping text and pic */
+header {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center horizontally */
+  gap: 30px;
+}
+
+/* Text block containing heading + description */
+.profile-text {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Heading: fully centered */
+.profile-text h1 {
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 14px;
   color: #0b2a5b;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-header p.description {
+/* Description: left aligned but inside a centered container */
+.profile-text .description {
   font-size: 20px;
   color: #0b2a5b;
-  margin-bottom: 30px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: left;
+  margin: 0;
+}
+
+/* Profile picture wrapper to position image */
+.pic-wrapper {
+  width: 220px;
+  align-self: flex-start; /* move left */
+  margin-left: calc(50% - 350px); /* shift left relative to center */
+  /* Explanation: 50% = center, 350px ≈ half max-width (700/2) of text block to align */
 }
 
 /* Profile picture */
@@ -38,9 +65,8 @@ header p.description {
   height: 220px;
   object-fit: cover;
   object-position: center center;
-  border-radius: 8px;
+  border-radius: 0; /* no rounded corners */
   display: block;
-  margin: 0 auto 40px; /* put space below */
 }
 
 /* Navigation links */
@@ -50,7 +76,7 @@ nav {
   margin-top: 20px;
   display: inline-flex;
   gap: 32px;
-  flex-wrap: wrap; /* allow wrapping on small screens */
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -78,12 +104,28 @@ footer {
 
 /* Mobile responsive tweaks */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 34px;
+  header {
+    align-items: center; /* center all on mobile */
   }
 
-  header p.description {
+  .profile-text h1 {
+    font-size: 34px;
+    white-space: normal;
+  }
+
+  .profile-text .description {
     font-size: 18px;
+    text-align: center;
+  }
+
+  .pic-wrapper {
+    margin-left: 0;
+    align-self: center;
+  }
+
+  .profile-pic {
+    width: 180px;
+    height: 180px;
   }
 
   nav {
