@@ -21,6 +21,17 @@ body {
   padding: 80px 6vw;
   position: relative;
 }
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+a,
+span,
+nav,
+button,
+input,
+textarea {
+  font-family: 'Gloria Hallelujah', cursive;
+}
 
 header {
   max-width: 900px;
