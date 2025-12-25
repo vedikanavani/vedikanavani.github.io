@@ -1,5 +1,5 @@
 /* =====================
-    RESET
+    RESET & GLOBAL
 ===================== */
 * {
   margin: 0;
@@ -16,8 +16,8 @@
 
 body {
   font-family: 'Gloria Hallelujah', cursive;
-  background-color: var(--bg-oat);
-  color: var(--text-main); /* Global text color */
+  background-color: #EFE6D8; /* var(--bg-oat) */
+  color: #2E2E2E; /* var(--text-main) */
   line-height: 1.6;
   text-align: center;
   margin: 0;
@@ -25,64 +25,24 @@ body {
   position: relative;
 }
 
-/* Updated: Removed !important to allow for better inheritance */
+/* Force color on all standard text elements */
+h1, h2, h3, p, span, div, footer {
+  color: #2E2E2E;
+}
+
+/* =====================
+    LINKS & NAVIGATION
+===================== */
 a,
 .nav-link {
   text-decoration: none;
-  color: var(--accent-olive-dark);
+  color: #5F6448 !important; /* var(--accent-olive-dark) */
   transition: opacity 0.2s ease;
 }
 
 a:hover,
 .nav-link:hover {
   opacity: 0.7;
-}
-
-header {
-  max-width: 900px;
-  margin: 0 auto 40px auto;
-}
-
-header h1 {
-  font-size: 42px;
-  font-weight: 400;
-  color: var(--text-main);
-}
-
-.profile-text {
-  max-width: 700px;
-  margin: 0 auto 30px auto;
-}
-
-.profile-text h1 {
-  font-size: 42px;
-  margin-bottom: 14px;
-  color: var(--text-main);
-}
-
-/* Updated: Explicitly set description color */
-.profile-text .description {
-  font-size: 20px;
-  text-align: left;
-  color: var(--text-main);
-}
-
-.pic-wrapper {
-  width: 220px;
-  height: 220px;
-  margin: 30px auto 40px;
-  /* Removed the large negative translateX which hides the image */
-  overflow: hidden;
-  border-radius: 50%; /* Optional: keeps it circular */
-}
-
-.profile-pic {
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  transform: scale(1.6);
 }
 
 .nav-buttons {
@@ -95,8 +55,69 @@ header h1 {
 }
 
 .nav-buttons .dot {
-  color: var(--accent-olive-dark);
+  color: #5F6448;
   margin: 0 -6px;
+}
+
+/* =====================
+    HEADER & PROFILE
+===================== */
+header {
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+}
+
+header h1 {
+  font-size: 42px;
+  font-weight: 400;
+}
+
+.profile-text {
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+}
+
+.profile-text h1 {
+  font-size: 42px;
+  margin-bottom: 14px;
+}
+
+.profile-text .description {
+  font-size: 20px;
+  text-align: left; /* Profile desc remains left aligned */
+}
+
+/* =====================
+    RESEARCH PAGE SPECIFIC
+===================== */
+/* This targets the subheading on your research page */
+.research-subheading, 
+.research-container h2, 
+.research-content h3 {
+  text-align: left !important;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =====================
+    IMAGES & PROJECTS
+===================== */
+.pic-wrapper {
+  width: 220px;
+  height: 220px;
+  margin: 30px auto 40px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.profile-pic {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transform: scale(1.6);
 }
 
 .projects {
@@ -109,34 +130,20 @@ header h1 {
   margin-bottom: 40px;
 }
 
-.project a {
-  text-decoration: none;
-}
-
-/* Updated: Removed !important */
 .project h2 {
   font-size: 22px;
   margin-bottom: 6px;
-  color: var(--accent-olive-dark);
+  color: #5F6448 !important;
 }
 
-.project a:hover h2 {
-  opacity: 0.7;
-}
-
-/* Updated: Ensure project paragraph text is visible */
 .project p {
   font-size: 16px;
   line-height: 1.5;
-  color: var(--text-main);
 }
 
-footer {
-  margin-top: 60px;
-  font-size: 14px;
-  color: var(--text-main);
-}
-
+/* =====================
+    FASHION GRID
+===================== */
 .fashion-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -153,10 +160,9 @@ footer {
   transition: transform 0.3s ease;
 }
 
-.fashion-grid img:hover {
-  transform: scale(1.03);
-}
-
+/* =====================
+    DECORATION & FOOTER
+===================== */
 .squiggle-svg {
   position: absolute;
   top: 0;
@@ -167,7 +173,7 @@ footer {
 }
 
 #squiggle-path {
-  stroke: var(--accent-olive-dark);
+  stroke: #5F6448;
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: drawSquiggle 3s ease forwards;
@@ -175,18 +181,23 @@ footer {
 }
 
 @keyframes drawSquiggle {
-  to {
-    stroke-dashoffset: 0;
-  }
+  to { stroke-dashoffset: 0; }
 }
 
+footer {
+  margin-top: 60px;
+  font-size: 14px;
+}
+
+/* =====================
+    MOBILE RESPONSIVE
+===================== */
 @media (max-width: 768px) {
   body {
     padding: 60px 20px;
   }
 
-  header h1,
-  .profile-text h1 {
+  header h1, .profile-text h1 {
     font-size: 34px;
   }
 
@@ -195,19 +206,11 @@ footer {
     text-align: center;
   }
 
-  .pic-wrapper {
-    width: 180px;
-    height: 180px;
-  }
-
-  .profile-pic {
-    width: 180px;
-    height: 180px;
-  }
-
   .nav-buttons {
     font-size: 16px;
-    gap: 14px;
+  }
+  
+  .fashion-grid {
+    grid-template-columns: 1fr;
   }
 }
-
