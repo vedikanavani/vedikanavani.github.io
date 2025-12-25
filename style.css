@@ -8,16 +8,16 @@
 }
 
 :root {
-  --bg-oat: #EFE6D8;
-  --bg-olive: #8B8F6A;
-  --text-main: #2E2E2E;
-  --accent-olive-dark: #5F6448;
+  --bg-rose-light: #FFD9D9;    /* Soft Rose/Pink */
+  --wine-deep: #4D0011;        /* Wine */
+  --pine-green: #243027;       /* Dark Pine */
+  --text-main: #2E2E2E;        /* Dark Charcoal */
 }
 
 body {
   font-family: 'Gloria Hallelujah', cursive;
-  background-color: #EFE6D8; /* var(--bg-oat) */
-  color: #2E2E2E; /* var(--text-main) */
+  background-color: #FFD9D9; /* Rose/Pink Background */
+  color: #243027;           /* Pine Green for general text */
   line-height: 1.6;
   text-align: center;
   margin: 0;
@@ -25,9 +25,23 @@ body {
   position: relative;
 }
 
-/* Force color on all standard text elements */
+/* Force Pine color on standard text elements */
 h1, h2, h3, p, span, div, footer {
-  color: #2E2E2E;
+  color: #243027; 
+}
+
+/* =====================
+    HEADER & NAME STYLING
+===================== */
+header h1 {
+  font-size: 42px;
+  font-weight: 400;
+  color: #243027; /* HI! I'm and the Full Stop stay Pine */
+}
+
+/* Your Name in Wine */
+.name-highlight {
+  color: #4D0011 !important; 
 }
 
 /* =====================
@@ -36,7 +50,7 @@ h1, h2, h3, p, span, div, footer {
 a,
 .nav-link {
   text-decoration: none;
-  color: #5F6448 !important; /* var(--accent-olive-dark) */
+  color: #4D0011 !important; /* Navigation in Wine */
   transition: opacity 0.2s ease;
 }
 
@@ -55,49 +69,20 @@ a:hover,
 }
 
 .nav-buttons .dot {
-  color: #5F6448;
+  color: #4D0011;
   margin: 0 -6px;
-}
-
-/* =====================
-    HEADER & PROFILE
-===================== */
-header {
-  max-width: 900px;
-  margin: 0 auto 40px auto;
-}
-
-header h1 {
-  font-size: 42px;
-  font-weight: 400;
-}
-
-.profile-text {
-  max-width: 700px;
-  margin: 0 auto 30px auto;
-}
-
-.profile-text h1 {
-  font-size: 42px;
-  margin-bottom: 14px;
-}
-
-.profile-text .description {
-  font-size: 20px;
-  text-align: left; /* Profile desc remains left aligned */
 }
 
 /* =====================
     RESEARCH PAGE SPECIFIC
 ===================== */
-/* This targets the subheading on your research page */
+/* Targets the research subheading to be left-aligned */
 .research-subheading, 
 .research-container h2, 
 .research-content h3 {
   text-align: left !important;
   max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px auto; 
 }
 
 /* =====================
@@ -112,11 +97,9 @@ header h1 {
 }
 
 .profile-pic {
-  width: 220px;
-  height: 220px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: center;
-  display: block;
   transform: scale(1.6);
 }
 
@@ -126,19 +109,15 @@ header h1 {
   text-align: left;
 }
 
-.project {
-  margin-bottom: 40px;
-}
-
 .project h2 {
   font-size: 22px;
   margin-bottom: 6px;
-  color: #5F6448 !important;
+  color: #4D0011 !important; /* Project Titles in Wine */
 }
 
 .project p {
   font-size: 16px;
-  line-height: 1.5;
+  color: #243027; /* Descriptions in Pine */
 }
 
 /* =====================
@@ -149,14 +128,12 @@ header h1 {
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   width: 100%;
-  padding: 20px 0;
 }
 
 .fashion-grid img {
   width: 100%;
   height: 600px;
   object-fit: cover;
-  display: block;
   transition: transform 0.3s ease;
 }
 
@@ -165,52 +142,29 @@ header h1 {
 ===================== */
 .squiggle-svg {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 200px;
+  top: 0; left: 0;
+  width: 100%; height: 200px;
   z-index: -1;
 }
 
 #squiggle-path {
-  stroke: #5F6448;
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: drawSquiggle 3s ease forwards;
-  stroke-opacity: 0.35;
-}
-
-@keyframes drawSquiggle {
-  to { stroke-dashoffset: 0; }
+  stroke: #4D0011; /* Swirly line in Wine */
+  stroke-width: 2;
+  stroke-opacity: 0.4;
+  fill: none;
 }
 
 footer {
   margin-top: 60px;
   font-size: 14px;
+  color: #243027;
 }
 
 /* =====================
     MOBILE RESPONSIVE
 ===================== */
 @media (max-width: 768px) {
-  body {
-    padding: 60px 20px;
-  }
-
-  header h1, .profile-text h1 {
-    font-size: 34px;
-  }
-
-  .profile-text .description {
-    font-size: 18px;
-    text-align: center;
-  }
-
-  .nav-buttons {
-    font-size: 16px;
-  }
-  
-  .fashion-grid {
-    grid-template-columns: 1fr;
-  }
+  body { padding: 60px 20px; }
+  header h1 { font-size: 34px; }
+  .fashion-grid { grid-template-columns: 1fr; }
 }
