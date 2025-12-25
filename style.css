@@ -7,41 +7,28 @@
   box-sizing: border-box;
 }
 
-/* =====================
-   VARIABLES
-===================== */
 :root {
   --bg-oat: #EFE6D8;
   --bg-olive: #8B8F6A;
-  --text-main: #1F1F1F;              /* DARKER */
+  --text-main: #2E2E2E;
   --accent-olive-dark: #5F6448;
 }
 
-/* =====================
-   BASE
-===================== */
 body {
   font-family: 'Gloria Hallelujah', cursive;
   background-color: var(--bg-oat);
   color: var(--text-main);
   line-height: 1.6;
   text-align: center;
+  margin: 0;
   padding: 80px 8vw;
+  position: relative;
 }
 
-/* FORCE TEXT COLOR EVERYWHERE */
-h1, h2, h3, h4, h5, h6,
-p, span, li, div {
-  color: var(--text-main);
-}
-
-/* =====================
-   LINKS & NAV
-===================== */
 a,
 .nav-link {
   text-decoration: none;
-  color: var(--accent-olive-dark);
+  color: var(--accent-olive-dark) !important;
   transition: opacity 0.2s ease;
 }
 
@@ -50,61 +37,48 @@ a:hover,
   opacity: 0.7;
 }
 
-/* =====================
-   HEADER
-===================== */
 header {
   max-width: 900px;
-  margin: 0 auto 40px;
+  margin: 0 auto 40px auto;
 }
 
 header h1 {
   font-size: 42px;
   font-weight: 400;
-  color: var(--text-main);
 }
 
-/* =====================
-   PROFILE
-===================== */
 .profile-text {
   max-width: 700px;
-  margin: 0 auto 30px;
+  margin: 0 auto 30px auto;
 }
 
 .profile-text h1 {
   font-size: 42px;
   margin-bottom: 14px;
-  color: var(--text-main);
 }
 
 .profile-text .description {
   font-size: 20px;
   text-align: left;
-  color: var(--text-main);
 }
 
-/* =====================
-   IMAGE
-===================== */
 .pic-wrapper {
   width: 220px;
   height: 220px;
   margin: 30px auto 40px;
-  overflow: hidden;
   transform: translateX(-240px);
+  overflow: hidden;
 }
 
 .profile-pic {
   width: 220px;
   height: 220px;
   object-fit: cover;
+  object-position: center;
+  display: block;
   transform: scale(1.6);
 }
 
-/* =====================
-   NAV BUTTONS
-===================== */
 .nav-buttons {
   font-size: 18px;
   margin-top: 50px;
@@ -116,11 +90,9 @@ header h1 {
 
 .nav-buttons .dot {
   color: var(--accent-olive-dark);
+  margin: 0 -6px;
 }
 
-/* =====================
-   PROJECTS
-===================== */
 .projects {
   max-width: 700px;
   margin: 60px auto;
@@ -131,30 +103,30 @@ header h1 {
   margin-bottom: 40px;
 }
 
+.project a {
+  text-decoration: none;
+}
+
 .project h2 {
   font-size: 22px;
   margin-bottom: 6px;
-  color: var(--accent-olive-dark);
+  color: var(--accent-olive-dark) !important;
+}
+
+.project a:hover h2 {
+  opacity: 0.7;
 }
 
 .project p {
   font-size: 16px;
   line-height: 1.5;
-  color: var(--text-main);
 }
 
-/* =====================
-   FOOTER
-===================== */
 footer {
   margin-top: 60px;
   font-size: 14px;
-  color: var(--text-main);
 }
 
-/* =====================
-   FASHION GRID
-===================== */
 .fashion-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -175,9 +147,29 @@ footer {
   transform: scale(1.03);
 }
 
-/* =====================
-   RESPONSIVE
-===================== */
+.squiggle-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: -1;
+}
+
+#squiggle-path {
+  stroke: var(--accent-olive-dark);
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawSquiggle 3s ease forwards;
+  stroke-opacity: 0.35;
+}
+
+@keyframes drawSquiggle {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 @media (max-width: 768px) {
   body {
     padding: 60px 20px;
@@ -203,3 +195,4 @@ footer {
     gap: 14px;
   }
 }
+
