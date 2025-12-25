@@ -1,5 +1,5 @@
 /* =====================
-   RESET
+    RESET
 ===================== */
 * {
   margin: 0;
@@ -17,7 +17,7 @@
 body {
   font-family: 'Gloria Hallelujah', cursive;
   background-color: var(--bg-oat);
-  color: var(--text-main);
+  color: var(--text-main); /* Global text color */
   line-height: 1.6;
   text-align: center;
   margin: 0;
@@ -25,10 +25,11 @@ body {
   position: relative;
 }
 
+/* Updated: Removed !important to allow for better inheritance */
 a,
 .nav-link {
   text-decoration: none;
-  color: var(--accent-olive-dark) !important;
+  color: var(--accent-olive-dark);
   transition: opacity 0.2s ease;
 }
 
@@ -45,6 +46,7 @@ header {
 header h1 {
   font-size: 42px;
   font-weight: 400;
+  color: var(--text-main);
 }
 
 .profile-text {
@@ -55,19 +57,23 @@ header h1 {
 .profile-text h1 {
   font-size: 42px;
   margin-bottom: 14px;
+  color: var(--text-main);
 }
 
+/* Updated: Explicitly set description color */
 .profile-text .description {
   font-size: 20px;
   text-align: left;
+  color: var(--text-main);
 }
 
 .pic-wrapper {
   width: 220px;
   height: 220px;
   margin: 30px auto 40px;
-  transform: translateX(-240px);
+  /* Removed the large negative translateX which hides the image */
   overflow: hidden;
+  border-radius: 50%; /* Optional: keeps it circular */
 }
 
 .profile-pic {
@@ -107,24 +113,28 @@ header h1 {
   text-decoration: none;
 }
 
+/* Updated: Removed !important */
 .project h2 {
   font-size: 22px;
   margin-bottom: 6px;
-  color: var(--accent-olive-dark) !important;
+  color: var(--accent-olive-dark);
 }
 
 .project a:hover h2 {
   opacity: 0.7;
 }
 
+/* Updated: Ensure project paragraph text is visible */
 .project p {
   font-size: 16px;
   line-height: 1.5;
+  color: var(--text-main);
 }
 
 footer {
   margin-top: 60px;
   font-size: 14px;
+  color: var(--text-main);
 }
 
 .fashion-grid {
@@ -183,6 +193,11 @@ footer {
   .profile-text .description {
     font-size: 18px;
     text-align: center;
+  }
+
+  .pic-wrapper {
+    width: 180px;
+    height: 180px;
   }
 
   .profile-pic {
