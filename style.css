@@ -28,7 +28,7 @@ body {
 
 a, .nav-link {
   text-decoration: none;
-  color: var(--accent-olive-dark) !important;
+  color: var(--accent-olive-dark) 
   transition: opacity 0.2s ease;
 }
 
