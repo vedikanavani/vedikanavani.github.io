@@ -154,6 +154,7 @@ a:hover,
 
   stroke: #4D0011; 
   stroke-width: 6; 
+  stroke-opacity: 0.35;
   stroke-linecap: round;
   fill: none;
   stroke-dasharray: 1200;
