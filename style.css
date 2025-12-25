@@ -21,17 +21,11 @@ body {
   line-height: 1.6;
   text-align: center;
   margin: 0;
-  padding: 80px 6vw;
+  padding: 80px 8vw;
   position: relative;
 }
 
-/* Force all text inside body to inherit --text-main */
-body * {
-  color: var(--text-main) !important;
-  font-family: 'Gloria Hallelujah', cursive;
-}
 
-/* Links/buttons override color */
 a, .nav-link {
   text-decoration: none;
   color: var(--accent-olive-dark) !important;
