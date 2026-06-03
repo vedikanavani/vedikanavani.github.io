@@ -1,209 +1,145 @@
-/* =====================
-    RESET & GLOBAL
-===================== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-:root {
-  --bg-rose-light: #FFD9D9;    /* Soft Rose/Pink */
-  --wine-deep: #4D0011;        /* Wine */
-  --pine-green: #243027;       /* Dark Pine */
-  --text-main: #2E2E2E;        /* Dark Charcoal */
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Gloria Hallelujah', cursive;
-  background-color: #FFD9D9; /* Rose/Pink Background */
-  color: #243027;           /* Pine Green for general text */
-  line-height: 1.6;
-  text-align: center;
-  margin: 0;
-  padding: 80px 8vw;
-  position: relative;
+    background: #f8f7f4;
+    color: #1c1c1c;
+    font-family: "Inter", sans-serif;
+    line-height: 1.8;
 }
 
-/* Force Pine color on standard text elements */
-h1, h2, h3, p, span, div, footer {
-  color: #243027; 
+main {
+    width: min(800px, 90%);
+    margin: 0 auto;
 }
 
-/* =====================
-    HEADER & NAME STYLING
-===================== */
-header h1 {
-  font-size: 42px;
-  font-weight: 400;
-  color: #243027; /* HI! I'm and the Full Stop stay Pine */
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
 }
 
-/* Your Name in Wine */
-.name-highlight {
-  color: #4D0011 !important; 
+.hero h1 {
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 1.5rem;
 }
 
-/* =====================
-    LINKS & NAVIGATION
-===================== */
-a,
-.nav-link {
-  text-decoration: none;
-  color: #4D0011 !important; /* Navigation in Wine */
-  transition: opacity 0.2s ease;
+.hero-text {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto 1rem auto;
+    color: #444;
 }
 
-a:hover,
-.nav-link:hover {
-  opacity: 0.7;
+.hero-subtext {
+    color: #777;
 }
 
-.nav-buttons {
-  font-size: 18px;
-  margin-top: 50px;
-  display: inline-flex;
-  gap: 18px;
-  flex-wrap: wrap;
-  justify-content: center;
+.scroll-indicator {
+    margin-top: 4rem;
+    font-size: 1.5rem;
+    color: #999;
 }
 
-.nav-buttons .dot {
-  color: #4D0011;
-  margin: 0 -6px;
+/* SECTIONS */
+
+section {
+    padding: 6rem 0;
 }
 
-/* =====================
-    RESEARCH PAGE SPECIFIC
-===================== */
-/* Targets the research subheading to be left-aligned */
-.research-subheading, 
-.research-container h2, 
-.research-content h3 {
-  text-align: left !important;
-  max-width: 700px;
-  margin: 20px auto; 
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
 }
 
-/* =====================
-    IMAGES & PROJECTS
-===================== */
-.pic-wrapper {
-  width: 220px;
-  height: 220px;
-  margin: 30px auto 40px;
-  overflow: hidden;
-  border-radius: 50%;
+p {
+    margin-bottom: 1rem;
 }
 
-.profile-pic {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.6);
+/* ITEMS */
+
+.item {
+    margin-bottom: 2.5rem;
 }
 
-.projects {
-  max-width: 700px;
-  margin: 60px auto;
-  text-align: left;
+.item h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
 }
 
-.project h2 {
-  font-size: 22px;
-  margin-bottom: 6px;
-  color: #4D0011 !important; /* Project Titles in Wine */
+.item p {
+    color: #555;
 }
 
-.project p {
-  font-size: 16px;
-  color: #243027; /* Descriptions in Pine */
+.item a {
+    text-decoration: none;
+    color: #111;
+    border-bottom: 1px solid #111;
 }
 
-/* =====================
-    FASHION GRID
-===================== */
-.fashion-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  width: 100%;
+.item a:hover {
+    opacity: 0.6;
 }
 
-.fashion-grid img {
-  width: 100%;
-  height: 600px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
+/* LISTS */
+
+ul {
+    list-style: none;
 }
 
-/* =====================
-    DECORATION & FOOTER
-===================== */
-
-.squiggle-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 200px;
-  z-index: -1;
+li {
+    margin-bottom: 1rem;
+    color: #444;
 }
 
-#squiggle-path {
+/* CONTACT */
 
-  stroke: #4D0011; 
-  stroke-width: 6; 
-  stroke-opacity: 0.35;
-  stroke-linecap: round;
-  fill: none;
-  stroke-dasharray: 1200;
-  stroke-dashoffset: 1200;
-  animation: drawSquiggle 3s ease forwards;
+.links {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
-@keyframes drawSquiggle {
-  to {
-    stroke-dashoffset: 0;
-  }
+.links a {
+    text-decoration: none;
+    color: #111;
+    border-bottom: 1px solid #111;
 }
 
-/* =====================
-    MOBILE RESPONSIVE
-===================== */
-@media (max-width: 768px) {
-  body { padding: 60px 20px; }
-  header h1 { font-size: 34px; }
-  .fashion-grid { grid-template-columns: 1fr; }
+.links a:hover {
+    opacity: 0.6;
 }
 
-.project {
-  max-width: 650px;      /* Limits width so lines wrap evenly */
-  margin: 20px auto 60px; /* 20px top (gap from Research), auto (centers), 60px bottom */
-  text-align: left;      /* Every line starts at the same place */
-}
+/* MOBILE */
 
-/* 2. The Title & Description */
-.project h2 {
-  font-size: 22px;
-  margin-bottom: 12px;
-  line-height: 1.3;
-}
+@media (max-width: 700px) {
 
-.project h4 {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.6;
-  text-wrap: balance;   /* Makes the lines roughly the same length */
-}
+    .hero h1 {
+        font-size: 3rem;
+    }
 
-/* 3. Navigation & Footer Spacing */
-.nav-link {
-  display: inline-block;
-  margin-top: 40px;     /* Gap above "Go Back Home" */
-  margin-bottom: 100px; /* Gap below "Go Back Home" to push footer down */
-}
+    .hero-text {
+        font-size: 1.1rem;
+    }
 
-footer {
-  padding-bottom: 50px; /* Extra breathing room at the very bottom */
+    h2 {
+        font-size: 1.6rem;
+    }
+
 }
