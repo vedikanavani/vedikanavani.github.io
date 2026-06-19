@@ -1,143 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vedika Navani</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vedika Navani</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <link rel="stylesheet" href="style.css">
-</head><body>
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span>VEDIKA NAVANI</span><span class="dot">•</span>
+      <span>ECONOMICS</span><span class="dot">•</span>
+      <span>COMPUTER SCIENCE</span><span class="dot">•</span>
+      <span>GAME THEORY</span><span class="dot">•</span>
+      <span>WRITING</span><span class="dot">•</span>
+      <span>MATHEMATICS</span><span class="dot">•</span>
+      <span>VEDIKA NAVANI</span><span class="dot">•</span>
+      <span>ECONOMICS</span><span class="dot">•</span>
+      <span>COMPUTER SCIENCE</span><span class="dot">•</span>
+      <span>GAME THEORY</span><span class="dot">•</span>
+      <span>WRITING</span><span class="dot">•</span>
+      <span>MATHEMATICS</span><span class="dot">•</span>
+    </div>
+  </div>
 
-<div class="ticker">
-    VEDIKA NAVANI • ECONOMICS • COMPUTER SCIENCE • WRITING • GAME THEORY •
-</div>
-
-<main>
-
-<section class="hero">
-
-    <div class="hero-text">
-
-        <div class="tag">
-            ashoka university
-        </div>
-
-        <h1>
-            HELLO<br>
-            I'M<br>
-            VEDIKA
+  <main>
+    <section class="hero">
+      <div class="hero-left">
+        <div class="tag">ashoka university</div>
+        <h1 class="hero-headline">
+          <span class="line">HELLO</span>
+          <span class="line line-im">I'M</span>
+          <span class="line line-name">VEDIKA</span>
         </h1>
+      </div>
 
-    </div>
+      <div class="hero-image">
+        <img src="vedika.jpeg" alt="Vedika Navani">
+      </div>
 
-    <div class="hero-image">
-        <img src="vedika.jpeg" alt="Vedika">
-    </div>
+      <div class="hero-intro">
+        <p>An Economics student and researcher, building at the intersection of microeconomics, game theory, and technology. I write, compute, and occasionally prove things.</p>
+        <div class="hero-links">
+          <a href="#writing" class="cta-link">MY WRITING <span class="arrow">↗</span></a>
+          <a href="#projects" class="cta-link">PROJECTS <span class="arrow">↗</span></a>
+        </div>
+      </div>
+    </section>
 
-    <div class="intro">
-        Economics, Computer Science, Mathematics,
-        writing, research and technology.
+    <section class="panel" id="about">
+      <div class="panel-inner">
+        <span class="eyebrow">01 — ABOUT</span>
+        <h2>A little<br><em>about me.</em></h2>
+        <p>I'm an Economics major with minors in Computer Science and Mathematics at Ashoka University. My interests lie in microeconomics, game theory, technology policy, law, writing, and computational approaches to economic research. I'm drawn to questions that sit at the edge of what models can explain.</p>
+      </div>
+    </section>
 
-        <br><br>
+    <section class="panel" id="writing">
+      <div class="panel-inner">
+        <span class="eyebrow">02 — WRITING</span>
+        <h2>Words on<br><em>the page.</em></h2>
+        <div class="card-list">
+          <div class="item-card">
+            <div class="item-meta">Essay · 2024</div>
+            <h3>Clubs Can't Fix Classrooms</h3>
+            <p>Ashoka's inclusivity initiatives need to move beyond extracurricular band-aids and take the podium in the classroom itself.</p>
+            <a href="https://www.the-edict.in/post/clubs-can-t-fix-classrooms-ashoka-s-inclusivity-needs-to-take-the-podium" target="_blank" class="read-link">Read Article →</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        Undergraduate at Ashoka University.
-    </div>
+    <section class="panel" id="projects">
+      <div class="panel-inner">
+        <span class="eyebrow">03 — PROJECTS</span>
+        <h2>Things I've<br><em>built & researched.</em></h2>
+        <div class="card-list">
+          <div class="item-card">
+            <div class="item-meta">Research Paper · Prof. Sarvesh Iyer</div>
+            <h3>Bayesian & Stochastic Game Theory</h3>
+            <p>Exploring how agents update beliefs and make decisions under uncertainty in strategic environments.</p>
+          </div>
+          <div class="item-card">
+            <div class="item-meta">NLP · Python</div>
+            <h3>Central Bank Sentiment Tool</h3>
+            <p>A sentiment analysis model that classifies central bank communications as hawkish or dovish using NLP.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</section>
-
-
-<section class="panel">
-
-    <span class="panel-number">01</span>
-
-    <h2>ABOUT</h2>
-
-    <p>
-        I'm an Economics major with minors in Computer Science and Mathematics.
-        My interests lie in microeconomics, game theory, technology policy,
-        law, writing, and computational approaches to economic research.
-    </p>
-
-</section>
-
-
-<section class="panel">
-
-    <span class="panel-number">02</span>
-
-    <h2>WRITING</h2>
-
-    <div class="project">
-
-        <h3>
-            Clubs Can't Fix Classrooms
-        </h3>
-
-        <a href="https://www.the-edict.in/post/clubs-can-t-fix-classrooms-ashoka-s-inclusivity-needs-to-take-the-podium">
-            Read Article →
-        </a>
-
-    </div>
-
-</section>
-
-
-<section class="panel">
-
-    <span class="panel-number">03</span>
-
-    <h2>PROJECTS</h2>
-
-    <div class="project">
-
-        <h3>
-            Bayesian & Stochastic Game Theory
-        </h3>
-
-        <p>Research paper written under Prof. Sarvesh Iyer.</p>
-
-    </div>
-
-    <div class="project">
-
-        <h3>
-            Central Bank NLP Tool
-        </h3>
-
-        <p>
-            Sentiment analysis model classifying central bank statements as
-            hawkish or dovish.
-        </p>
-
-    </div>
-
-</section>
-
-
-<section class="contact">
-
-    <h2>LET'S TALK</h2>
-
-    <div class="links">
-
-        <a href="https://www.linkedin.com/in/vedikanavani/">
-            LinkedIn
-        </a>
-
-        <a href="mailto:vedika.navani_ug2024@ashoka.edu.in">
-            Email
-        </a>
-
-        <a href="Vedika_Resume.pdf">
-            Resume
-        </a>
-
-    </div>
-
-</section>
-
-</main>
+    <section class="contact">
+      <div class="contact-inner">
+        <span class="eyebrow">04 — CONTACT</span>
+        <h2 class="contact-headline">Let's<br>talk.</h2>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/vedikanavani/" target="_blank">LinkedIn ↗</a>
+          <a href="mailto:vedika.navani_ug2024@ashoka.edu.in">Email ↗</a>
+          <a href="Vedika_Resume.pdf" target="_blank">Résumé ↗</a>
+        </div>
+      </div>
+      <div class="contact-deco" aria-hidden="true">VEDIKA</div>
+    </section>
+  </main>
 
 </body>
-
 </html>
